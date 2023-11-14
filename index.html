@@ -18,6 +18,7 @@
       role="button"
       aria-expanded="false"
       tabindex="0"
+      aria-describedby="flip-desc"
     >
       <div class="flip-card-inner">
         <div
@@ -25,17 +26,34 @@
           id="front"
           aria-hidden="false"
         >
-          Front Content
+          <div aria-describedby="flip-desc">Front Content</div>
         </div>
         <div
           class="flip-card-back"
           aria-hidden="true"
           id="back"
         >
-          Back Content
+          <div>
+            <h3>Back Content</h3>
+
+            <a
+              href="#"
+              tabindex="-1"
+              id="linkRemove"
+            >
+              Homepage</a
+            >
+          </div>
         </div>
       </div>
     </div>
+    <!-- This is the instruction to let SR readers that it is a flip card. -->
+    <span
+      class="sr-only"
+      id="flip-desc"
+      >This is a flip card. Activated by pressing enter or spacebar, or alt +
+      enter/ alt + space bar.</span
+    >
   </body>
   <script src="scripts.js"></script>
 </html>

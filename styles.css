@@ -9,7 +9,7 @@
   color: cornsilk;
 }
 
-.flip-card[aria-expanded="true"] .flip-card-inner {
+.flip-card[aria-pressed="true"] .flip-card-inner {
   transform: rotateY(180deg);
 }
 

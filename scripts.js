@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //function that toggles the expanded state
   function toggleFlip(card) {
-    var isExpanded = card.getAttribute("aria-expanded") === "true";
-    card.setAttribute("aria-expanded", String(!isExpanded));
+    var isPressed = card.getAttribute("aria-pressed") === "true";
+    card.setAttribute("aria-pressed", String(!isPressed));
   }
 
   //function that toggles the aria-hidden state and removes the tabindex on the link.
   function toggleSrHidden(card) {
-    let isSRHidden = card.getAttribute("aria-expanded") === "true";
+    let isSRHidden = card.getAttribute("aria-pressed") === "true";
     front.setAttribute("aria-hidden", String(isSRHidden));
     back.setAttribute("aria-hidden", String(!isSRHidden));
     if (linkRemove.getAttribute("tabindex") == 0) {
